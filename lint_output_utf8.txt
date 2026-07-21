@@ -1,0 +1,18 @@
+﻿
+C:\Users\Abhishek pk\OneDrive\Desktop\fancing_\ajfencing\src\components\home\Contact.tsx
+   62:28  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  223:69  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Abhishek pk\OneDrive\Desktop\fancing_\ajfencing\src\components\home\FencingServices.tsx
+  37:111  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Abhishek pk\OneDrive\Desktop\fancing_\ajfencing\src\components\home\Testimonials.tsx
+  124:33  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  124:47  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  185:93  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Abhishek pk\OneDrive\Desktop\fancing_\ajfencing\src\components\ui\animated-sections.tsx
+  45:12  warning  'currentIndex' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 7 problems (6 errors, 1 warning)
+
