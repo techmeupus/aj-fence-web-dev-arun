@@ -9,8 +9,8 @@ export default function QuoteForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const router = useRouter();
   const formId = "landing_main_quote_form";
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (typeof window !== "undefined") {
       const eventId = `${formId}_${Date.now()}`;
       window.dataLayer = window.dataLayer || [];
@@ -23,12 +23,23 @@ export default function QuoteForm() {
       });
     }
 
-    setTimeout(() => {
-        setIsSubmitted(true);
-        router.push('/thank-you');
-      }, 500);
+    try {
+      const formData = new FormData(e.target);
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLScb3koOXUgYUdMLSKrChXQkSaT55POJ_BKERMB2Hzlb9iMw1A/formResponse",
+        {
+          method: "POST",
+          mode: "no-cors",
+          body: formData,
+        }
+      );
+    } catch (error) {
+      console.error("Form submission error", error);
+    } finally {
+      setIsSubmitted(true);
+      router.push('/thank-you');
+    }
   };
-
   const badges = [
     { number: "20+", label: "Years Experience", icon: FaStar },
     { number: "5,000+", label: "Projects Done", icon: FaHome },
@@ -100,18 +111,10 @@ export default function QuoteForm() {
 
           {/* Right Side Form */}
           <div className="lg:sticky lg:top-24">
-            <iframe
-              name="hidden_iframe_main"
-              id="hidden_iframe_main"
-              style={{ display: "none" }}
-            ></iframe>
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden min-h-[600px] flex items-center">
               {!isSubmitted ? (
                   <form
                     className="p-8 space-y-2 w-full"
-                    action="https://docs.google.com/forms/d/e/1FAIpQLScb3koOXUgYUdMLSKrChXQkSaT55POJ_BKERMB2Hzlb9iMw1A/formResponse"
-                    method="POST"
-                    target="hidden_iframe_main"
                     onSubmit={handleSubmit}
                   >
                 {/* Name */}

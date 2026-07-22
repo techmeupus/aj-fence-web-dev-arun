@@ -8,7 +8,8 @@ const ContactForm = () => {
     const router = useRouter();
     const [submitted, setSubmitted] = React.useState(false);
 
-    const handleSubmit = () => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
         if (typeof window !== "undefined") {
             (window as any).dataLayer = (window as any).dataLayer || [];
             (window as any).dataLayer.push({
@@ -17,9 +18,21 @@ const ContactForm = () => {
             });
         }
 
-        setTimeout(() => {
+        try {
+            const formData = new FormData(e.currentTarget);
+            await fetch(
+                "https://docs.google.com/forms/d/e/1FAIpQLSc5Vufhh3ofcumOSFlGqBDwdruefh99FZUKf5gPedCYYf6WsQ/formResponse",
+                {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: formData,
+                }
+            );
+        } catch (error) {
+            console.error("Form submission error", error);
+        } finally {
             router.push('/thank-you');
-        }, 800);
+        }
     };
 
     return (
@@ -35,15 +48,9 @@ const ContactForm = () => {
                                 Get <span className="text-[#e4c58a]">Free Estimate</span>
                             </h2>
 
-                            {/* Hidden iframe must be always preserved in DOM */}
-                            <iframe name="hidden_iframe" id="hidden_iframe" style={{ display: 'none' }}></iframe>
-
                             {!submitted ? (
                                 <form
                                     className="flex flex-col gap-4"
-                                    action="https://docs.google.com/forms/d/e/1FAIpQLSc5Vufhh3ofcumOSFlGqBDwdruefh99FZUKf5gPedCYYf6WsQ/formResponse"
-                                    method="POST"
-                                    target="hidden_iframe"
                                     onSubmit={handleSubmit}
                                 >
                                     {/* Horizontal Fields Row */}
