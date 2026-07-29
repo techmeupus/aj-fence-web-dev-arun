@@ -8,6 +8,15 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const blogPosts = [
     {
+        title: "Repairing vs. Replacing a Fence: How to Decide (2026 Guide)",
+        excerpt: "Should you repair or replace your fence? Compare costs, damage, lifespan, and expert tips to determine the best solution for your home or business.",
+        image: "/blog-post/Repairing vs. Replacing a Fence.webp",
+        date: "Jul 30, 2026",
+        author: "AJ Fence Team",
+        slug: "repairing-vs-replacing-fence",
+        category: "Maintenance & Tips"
+    },
+    {
         title: "Aluminum Fence Installation in Lakeland, FL: Costs, Timeline & Expert Tips",
         excerpt: "Planning an aluminum fence installation in Lakeland, FL? Learn average costs, installation timelines, permit requirements, maintenance tips, and what to expect before starting your project.",
         image: "/blog-post/fence installion lakeland fl.webp",
