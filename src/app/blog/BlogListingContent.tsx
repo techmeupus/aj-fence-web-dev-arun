@@ -17,13 +17,13 @@ const blogPosts = [
         category: "Installation Guide"
     },
     {
-        title: "Privacy vs. Security Fences: Which Does Your Property Need?",
-        excerpt: "Choosing between a privacy fence and a security fence? Learn the differences, benefits, and which fencing solution is best for your property.",
-        image: "/blog-post/fencing installation.webp",
-        date: "Jun 29, 2026",
+        title: "Privacy vs. Security Fences: Which Is Right for Your Property?",
+        excerpt: "Compare privacy and security fences to find the best option for your home or business. Learn the key differences, benefits, costs, and expert tips before you build.",
+        image: "/blog-post/Privacy vs. Security Fences Which Does Your Property Need.jpg",
+        date: "Jul 30, 2026",
         author: "AJ Fence Team",
         slug: "privacy-vs-security-fence",
-        category: "Guide"
+        category: "Comparison Guide"
     },
     {
         title: "Fence Installation Cost in Polk & Hillsborough: What to Expect",

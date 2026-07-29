@@ -11,6 +11,7 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ajfencemfg.com"),
   title: "AJ Fence - Premium Fencing Solutions",
   description: "Top-quality fencing services in Polk and Hillsborough counties.",
 };
