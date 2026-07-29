@@ -8,6 +8,15 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const blogPosts = [
     {
+        title: "Aluminum Fence Installation in Lakeland, FL: Costs, Timeline & Expert Tips",
+        excerpt: "Planning an aluminum fence installation in Lakeland, FL? Learn average costs, installation timelines, permit requirements, maintenance tips, and what to expect before starting your project.",
+        image: "/blog-post/fence installion lakeland fl.webp",
+        date: "Jul 30, 2026",
+        author: "AJ Fence Team",
+        slug: "aluminum-fence-installation-lakeland-fl",
+        category: "Installation Guide"
+    },
+    {
         title: "Privacy vs. Security Fences: Which Does Your Property Need?",
         excerpt: "Choosing between a privacy fence and a security fence? Learn the differences, benefits, and which fencing solution is best for your property.",
         image: "/blog-post/fencing installation.webp",
