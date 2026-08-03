@@ -31,6 +31,10 @@ export default function QuickQuote({ isOpen, onClose }) {
         form_name: "Quick Quote Popup",
         form_location: "landing_page_popup",
         event_id: eventId,
+        user_data: {
+          phone_number: data.phone || "",
+          name: data.name || "",
+        }
       });
     }
 

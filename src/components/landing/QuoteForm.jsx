@@ -15,6 +15,11 @@ export default function QuoteForm() {
   const formId = "landing_main_quote_form";
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    data.formId = formId;
+
     if (typeof window !== "undefined") {
       const eventId = `${formId}_${Date.now()}`;
       window.dataLayer = window.dataLayer || [];
@@ -24,14 +29,15 @@ export default function QuoteForm() {
         form_name: "Main Quote Form",
         form_location: "landing_page",
         event_id: eventId,
+        user_data: {
+          email: data.email || "",
+          phone_number: data.phone || "",
+          name: data.fullName || "",
+        }
       });
     }
 
     try {
-      const formData = new FormData(e.target);
-      const data = Object.fromEntries(formData.entries());
-      data.formId = formId;
-
       await fetch(SCRIPT_URL, {
         method: "POST",
         headers: {
