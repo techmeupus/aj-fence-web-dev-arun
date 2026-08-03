@@ -5,6 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaStar, FaHome, FaCheck } from "react-icons/fa";
 
+const SCRIPT_URL =
+  process.env.NEXT_PUBLIC_QUICK_QUOTE_SCRIPT_URL ||
+  "https://script.google.com/macros/s/AKfycbysqUCVboXC9cp6FrsP-nJ7EKzSkR9MQDbhi4u6iJTypF5qv7x5EC8_5lEl1V1-0VXl/exec";
+
 export default function QuoteForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const router = useRouter();
@@ -25,14 +29,16 @@ export default function QuoteForm() {
 
     try {
       const formData = new FormData(e.target);
-      await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLScb3koOXUgYUdMLSKrChXQkSaT55POJ_BKERMB2Hzlb9iMw1A/formResponse",
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: formData,
-        }
-      );
+      const data = Object.fromEntries(formData.entries());
+      data.formId = formId;
+
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain",
+        },
+        body: JSON.stringify(data),
+      });
     } catch (error) {
       console.error("Form submission error", error);
     } finally {
@@ -125,7 +131,7 @@ export default function QuoteForm() {
 
                   <input
                     type="text"
-                    name="entry.1142339120"
+                    name="fullName"
                     placeholder="John Doe"
                     className="w-full border border-gray-300 rounded-lg px-4 py-2
                     focus:outline-none focus:ring-2 focus:ring-[#4c0c0c]
@@ -142,7 +148,7 @@ export default function QuoteForm() {
 
                   <input
                     type="tel"
-                    name="entry.1878332718"
+                    name="phone"
                     placeholder="(512) 555-0123"
                     className="w-full border border-gray-300 rounded-lg px-4 py-2
                     focus:outline-none focus:ring-2 focus:ring-[#4c0c0c]
@@ -159,7 +165,7 @@ export default function QuoteForm() {
 
                   <input
                     type="email"
-                    name="entry.1659341449"
+                    name="email"
                     placeholder="john@example.com"
                     className="w-full border border-gray-300 rounded-lg px-4 py-2
                     focus:outline-none focus:ring-2 focus:ring-[#4c0c0c]
@@ -174,7 +180,7 @@ export default function QuoteForm() {
                   </label>
 
                   <select
-                    name="entry.813581305"
+                    name="serviceType"
                     className="w-full border border-gray-300 rounded-lg px-4 py-3
                     focus:outline-none focus:ring-2 focus:ring-[#4c0c0c]
                     focus:border-transparent transition-all text-gray-900"
@@ -195,7 +201,7 @@ export default function QuoteForm() {
                   </label>
 
                   <select
-                    name="entry.1974478535"
+                    name="material"
                     className="w-full border border-gray-300 rounded-lg px-4 py-2
                     focus:outline-none focus:ring-2 focus:ring-[#4c0c0c]
                     focus:border-transparent transition-all text-gray-900"
@@ -215,7 +221,7 @@ export default function QuoteForm() {
                   </label>
 
                   <textarea
-                    name="entry.1252279274"
+                    name="details"
                     placeholder="Tell us about your project (size, style, timeline, etc.)"
                     rows={4}
                     className="w-full border border-gray-300 rounded-lg px-4 py-3

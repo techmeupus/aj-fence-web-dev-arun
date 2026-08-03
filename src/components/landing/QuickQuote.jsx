@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSenc-zoPzP7Y8OAe26anl7Nlrzr4lK8zrxcX4DBBEhsvR5Y5A/formResponse";
+const SCRIPT_URL =
+  process.env.NEXT_PUBLIC_QUICK_QUOTE_SCRIPT_URL ||
+  "https://script.google.com/macros/s/AKfycbysqUCVboXC9cp6FrsP-nJ7EKzSkR9MQDbhi4u6iJTypF5qv7x5EC8_5lEl1V1-0VXl/exec";
 
 export default function QuickQuote({ isOpen, onClose }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,6 +18,8 @@ export default function QuickQuote({ isOpen, onClose }) {
     setIsLoading(true);
 
     const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    data.formId = formId;
 
     // GTM tracking
     if (typeof window !== "undefined") {
@@ -31,10 +34,12 @@ export default function QuickQuote({ isOpen, onClose }) {
       });
     }
 
-    fetch(FORM_URL, {
+    fetch(SCRIPT_URL, {
       method: "POST",
-      mode: "no-cors",
-      body: formData,
+      headers: {
+        "Content-Type": "text/plain",
+      },
+      body: JSON.stringify(data),
     })
       .then(() => {
         setIsLoading(false);
@@ -70,7 +75,7 @@ export default function QuickQuote({ isOpen, onClose }) {
           >
             <input
               type="text"
-              name="entry.234654512"
+              name="name"
               placeholder="Name"
               className="w-full border border-[#4c0c0c]/10 p-3 rounded bg-white text-[#4c0c0c] placeholder:text-[#4c0c0c]/40 outline-none focus:border-[#4c0c0c]/30"
               required
@@ -78,14 +83,14 @@ export default function QuickQuote({ isOpen, onClose }) {
 
             <input
               type="tel"
-              name="entry.266120087"
+              name="phone"
               placeholder="Phone Number"
               className="w-full border border-[#4c0c0c]/10 p-3 rounded bg-white text-[#4c0c0c] placeholder:text-[#4c0c0c]/40 outline-none focus:border-[#4c0c0c]/30"
               required
             />
 
             <select
-              name="entry.1920638197"
+              name="fenceType"
               className="w-full border border-[#4c0c0c]/10 p-3 rounded bg-white text-[#4c0c0c] outline-none focus:border-[#4c0c0c]/30"
               required
             >
