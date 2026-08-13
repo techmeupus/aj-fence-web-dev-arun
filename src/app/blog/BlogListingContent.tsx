@@ -8,6 +8,15 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const blogPosts = [
     {
+        title: "Chain Link Fence Installation in Lakeland, FL: A Homeowner's Guide to Cost & Process",
+        excerpt: "Searching for chain link installation near me? See 2026 pricing, step-by-step install process, height & coating options, and permit facts for Lakeland, Polk & Hillsborough County homes.",
+        image: "/blog-post/chain link cost.webp",
+        date: "Aug 14, 2026",
+        author: "AJ Fence Team",
+        slug: "chain-link-fence-installation-lakeland-fl-cost-guide",
+        category: "Cost Guide"
+    },
+    {
         title: "Repairing vs. Replacing a Fence: How to Decide (2026 Guide)",
         excerpt: "Should you repair or replace your fence? Compare costs, damage, lifespan, and expert tips to determine the best solution for your home or business.",
         image: "/blog-post/Repairing vs. Replacing a Fence.webp",
