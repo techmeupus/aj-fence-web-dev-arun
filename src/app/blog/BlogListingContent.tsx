@@ -8,6 +8,15 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const blogPosts = [
     {
+        title: "How to Extend the Life of Your Aluminum Fence in Florida's Climate",
+        excerpt: "Learn how to protect your aluminum fence from Florida's heat, humidity, salt air, and hurricanes with these expert maintenance tips from AJ Fence.",
+        image: "/blog-post/aluminum fence maintenance tips.jpg",
+        date: "Sep 1, 2026",
+        author: "AJ Fence Team",
+        slug: "how-to-extend-life-of-aluminum-fence-florida",
+        category: "Maintenance & Tips"
+    },
+    {
         title: "Chain Link Fence Installation in Lakeland, FL: A Homeowner's Guide to Cost & Process",
         excerpt: "Searching for chain link installation near me? See 2026 pricing, step-by-step install process, height & coating options, and permit facts for Lakeland, Polk & Hillsborough County homes.",
         image: "/blog-post/chain link cost.webp",
