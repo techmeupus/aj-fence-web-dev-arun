@@ -9,6 +9,9 @@ export const metadata: Metadata = {
         title: "Aluminum Fence Installation in Lakeland, FL: Costs, Timeline & Expert Tips",
         description: "Planning an aluminum fence installation in Lakeland, FL? Learn average costs, installation timelines, permit requirements, maintenance tips, and what to expect before starting your project.",
         images: ["/blog-post/fence installion lakeland fl.webp"],
+    },
+    alternates: {
+        canonical: "https://ajfencemfg.com/blog/aluminum-fence-installation-lakeland-fl/",
     }
 };
 

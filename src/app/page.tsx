@@ -11,6 +11,9 @@ import ContactForm from "@/components/home/ContactForm";
 export const metadata: Metadata = {
   title: "AJ Fence – Trusted Fencing Company for Quality Fences",
   description: "AJ Fence is a reliable fencing company providing professional fence installation and repair for homes and businesses with durable, long-lasting results.",
+  alternates: {
+    canonical: "https://ajfencemfg.com/",
+  },
 };
 
 const jsonLd = {
@@ -243,25 +246,25 @@ const jsonLd = {
 export default function Home() {
   const heroSections = [
     {
-      text: "High-Quality Fence For Less!",
+      text: "AJ Fence – The Local Fencing Company Serving Polk & Hillsborough County, FL",
       img: "/herosection/1.avif",
       ctaText: "Contact Us Now",
       ctaLink: "/contact-us/"
     },
     {
-      text: "High-Quality Fence For Less!",
+      text: "AJ Fence – The Local Fencing Company Serving Polk & Hillsborough County, FL",
       img: "/herosection/2.avif",
       ctaText: "Contact Us Now",
       ctaLink: "/contact-us/"
     },
     {
-      text: "High-Quality Fence For Less!",
+      text: "AJ Fence – The Local Fencing Company Serving Polk & Hillsborough County, FL",
       img: "/herosection/3.avif",
       ctaText: "Contact Us Now",
       ctaLink: "/contact-us/"
     },
     {
-      text: "High-Quality Fence For Less!",
+      text: "AJ Fence – The Local Fencing Company Serving Polk & Hillsborough County, FL",
       img: "/herosection/5.avif",
       ctaText: "Contact Us Now",
       ctaLink: "/contact-us/"

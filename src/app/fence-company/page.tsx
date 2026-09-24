@@ -4,6 +4,9 @@ import FenceCompanyContent from './FenceCompanyContent';
 export const metadata: Metadata = {
     title: "Fence Company in Lakeland, FL | Installation & Contractor Services - AJ Fence",
     description: "Free, no-obligation fence consultation from AJ Fence - Lakeland's family-owned fence company since 2004. Licensed & insured, Polk & Hillsborough",
+    alternates: {
+        canonical: "https://ajfencemfg.com/fence-company/",
+    },
 };
 
 const jsonLd = {

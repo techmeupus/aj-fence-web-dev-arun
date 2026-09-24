@@ -9,6 +9,9 @@ export const metadata: Metadata = {
         title: "Privacy vs. Security Fences: Which Is Right for Your Property?",
         description: "Compare privacy and security fences to find the best option for your home or business. Learn the key differences, benefits, costs, and expert tips before you build.",
         images: ["/blog-post/Privacy vs. Security Fences Which Does Your Property Need.jpg"],
+    },
+    alternates: {
+        canonical: "https://ajfencemfg.com/blog/privacy-vs-security-fence/",
     }
 };
 

@@ -33,6 +33,9 @@ export const metadata: Metadata = {
         title: "How to Extend the Life of Your Aluminum Fence in Florida's Climate",
         description: "Learn how to protect your aluminum fence from Florida's heat, humidity, salt air, and hurricanes with these expert maintenance tips from AJ Fence.",
         images: ["/blog-post/aluminum fence maintenance tips.jpg"]
+    },
+    alternates: {
+        canonical: "https://ajfencemfg.com/blog/how-to-extend-life-of-aluminum-fence-florida/",
     }
 };
 

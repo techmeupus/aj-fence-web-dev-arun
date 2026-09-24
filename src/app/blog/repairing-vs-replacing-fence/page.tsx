@@ -9,6 +9,9 @@ export const metadata: Metadata = {
         title: "Repairing vs. Replacing a Fence: How to Decide (2026 Guide)",
         description: "Should you repair or replace your fence? Compare costs, damage, lifespan, and expert tips to determine the best solution for your home or business.",
         images: ["/blog-post/Repairing vs. Replacing a Fence.webp"],
+    },
+    alternates: {
+        canonical: "https://ajfencemfg.com/blog/repairing-vs-replacing-fence/",
     }
 };
 

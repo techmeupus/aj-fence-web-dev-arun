@@ -4,6 +4,9 @@ import ChainLinkFencingContent from './ChainLinkFencingContent';
 export const metadata: Metadata = {
     title: "Chain Link Fence Installation in Polk & Hillsborough County, FL",
     description: "Chain link fence installation & repair in Lakeland, Brandon, Tampa & across Polk and Hillsborough County. Residential & commercial. Free estimates. Serving FL since 2004.",
+    alternates: {
+        canonical: "https://ajfencemfg.com/fencing-services/chain-link/",
+    },
 };
 
 const faqSchema = {

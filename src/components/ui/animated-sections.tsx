@@ -216,9 +216,9 @@ const AnimatedSections: React.FC<AnimatedSectionsProps> = ({
                                         />
                                     </div>
                                 )}
-                                <h2 className="section-heading text-white text-center font-semibold w-[90vw] max-w-[1200px] text-4xl md:text-6xl normal-case leading-tight z-10 mb-8" ref={(el) => { if (el) headingRefs.current[i] = el; }}>
+                                <h1 className="section-heading text-white text-center font-semibold w-[90vw] max-w-[1200px] text-4xl md:text-6xl normal-case leading-tight z-10 mb-8" ref={(el) => { if (el) headingRefs.current[i] = el; }}>
                                     {section.text}
-                                </h2>
+                                </h1>
 
                                 {section.ctaText && section.ctaLink && (
                                     <Link

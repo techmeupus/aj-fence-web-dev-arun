@@ -2,6 +2,14 @@ import React from 'react';
 import { Metadata } from 'next';
 import FenceInstallationCostClient from './FenceInstallationCostClient';
 
+export const metadata: Metadata = {
+    title: "Fence Installation Cost in Polk & Hillsborough: What to Expect",
+    description: "Learn what to expect for fence installation costs in Polk and Hillsborough counties. We break down the factors that affect fencing costs.",
+    alternates: {
+        canonical: "https://ajfencemfg.com/blog/fence-installation-cost-polk-hillsborough/",
+    },
+};
+
 const post = {
     title: "Fence Installation Cost in Polk & Hillsborough: What to Expect",
     metaTitle: "Fence Installation Cost in Polk & Hillsborough: What to Expect",
@@ -65,11 +73,6 @@ const post = {
         <p>Professional installation ensures your fence is properly aligned, securely anchored, and compliant with local regulations. Experienced contractors understand permit requirements, property boundaries, and the best installation methods for Florida's unique climate and soil conditions.</p>
         <p>Every property is unique, which means fence installation cost can vary significantly from one project to another. The best way to understand your investment is to schedule a professional consultation and receive a customized quote based on your property's size, terrain, and fencing goals.</p>
     `
-};
-
-export const metadata: Metadata = {
-    title: post.metaTitle || `${post.title} | AJ Fence Blog`,
-    description: post.metaDescription || post.description,
 };
 
 const jsonLd = {

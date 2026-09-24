@@ -4,6 +4,9 @@ import AluminumMaintenanceClient from './AluminumMaintenanceClient';
 export const metadata: Metadata = {
     title: "5 Essential Maintenance Tips for Aluminum Fencing | AJ Fence",
     description: "Keep your aluminum fence looking new with these 5 simple maintenance tips. Learn how to clean, protect, and inspect your fence for long-lasting performance.",
+    alternates: {
+        canonical: "https://ajfencemfg.com/blog/aluminum-fence-maintenance-tips/",
+    },
 };
 
 export default function AluminumMaintenancePage() {

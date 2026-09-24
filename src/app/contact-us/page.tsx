@@ -6,6 +6,9 @@ import ContactForm from "@/components/home/ContactForm";
 export const metadata: Metadata = {
     title: "Contact AJ Fence | Get Help to Install Fence Today",
     description: "Contact AJ Fence to install fence for your home or business. Speak with our fencing experts about vinyl, wood, and chain-link fencing solutions.",
+    alternates: {
+        canonical: "https://ajfencemfg.com/contact-us/",
+    },
 };
 
 export default function ContactUsPage() {
