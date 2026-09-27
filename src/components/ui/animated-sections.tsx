@@ -188,7 +188,7 @@ const AnimatedSections: React.FC<AnimatedSectionsProps> = ({
     return (
         <div
             ref={containerRef}
-            className={`h-[70vh] w-full overflow-hidden bg-black text-white uppercase font-sans relative ${className}`}
+            className={`h-[85vh] md:h-[90vh] min-h-[600px] w-full overflow-hidden bg-black text-white uppercase font-sans relative ${className}`}
         >
             {sections.map((section, i) => (
                 <section
