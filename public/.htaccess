@@ -18,3 +18,10 @@ RewriteRule ^(.*)$ $1/index.html [L]
 
 # Custom 404 page
 ErrorDocument 404 /404.html
+
+# Cache static images/fonts from /public for 30 days (filenames are not hashed, so not immutable)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(avif|webp|png|jpe?g|gif|svg|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>

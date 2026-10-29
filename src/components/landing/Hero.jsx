@@ -11,6 +11,7 @@ export default function Hero({ openPopup }) {
           fill
           className="object-cover scale-105 hover:scale-110 transition-transform duration-[4000ms]"
           priority
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
       </div>
